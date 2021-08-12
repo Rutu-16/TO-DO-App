@@ -1,0 +1,12 @@
+<%- include('header'); -%>
+  <div class="container">
+    <p class="fs-4 mx-5 mt-4 text-light text-center">
+      <%= item.title %>
+    </p>
+    <form class="input-group mb-3 mx-5 mt-5" action="/edit-item/<%= item._id %>" method="post">
+
+      <input type="text" class="text-center" placeholder="Edit Item" name="title" autocomplete="OFF" required />
+      <button class="btn btn-outline-dark btn-lg text-light" type="submit">Edit</button>
+      <a role="button" class="btn btn-outline-dark btn-lg text-light" href="/delete/<%= item._id %>">Delete</a>
+    </form>
+  </div>

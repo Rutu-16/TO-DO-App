@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+
+
+  <div class="container bg-dark text-light pt-5">
+    <h2 class="text-center">List of Tasks</h2>
+    <hr>
+    <ul class="list-group list-group-flush bg-dark p-5 mx-5">
+      <% items.forEach((ele)=>{ %>
+
+        <li class="list-group-item list-group-item-light mx-5 text-dark mb-3 rounded-pill fs-4 text-center"><a
+            href="/edit-item/<%= ele._id %>">
+            <%= ele.title %>
+          </a>
+        </li>
+        <%})%>
+
+    </ul>
+    <hr>
+  </div>
